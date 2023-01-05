@@ -1,7 +1,7 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/material.dart';
+//ignore_for_file: prefer_const_constructors
 
+import 'package:flutter/material.dart';
+import 'package:counter/counter.dart';
 
 class ExercisesScreen extends StatefulWidget {
   const ExercisesScreen({super.key});
@@ -16,116 +16,47 @@ class _ExercisesScreenState extends State<ExercisesScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Center(
-        child:SingleChildScrollView(
+        child: SingleChildScrollView(
           child: Column(
-            children:[
+            children: [
               Container(
-                  child: Text(
-                    'This is My Text',
-                    style: TextStyle(color: Colors.white, fontSize: 30),
-                  ),
-                    height: 300,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
+                child: Text(
+                  'This is My Text',
+                  style: TextStyle(color: Colors.white, fontSize: 30),
+                ),
+                height: 300,
+                width: MediaQuery.of(context).size.width,
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
                         image: AssetImage('assets/btnfoto11.jpeg'),
                         fit: BoxFit.fitHeight)),
               ),
-              Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height,
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(15.0),
-                      ),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width - 10,
-                        height: 100,
-                        child: Container(
-                          margin: const EdgeInsets.all(8.0),
-                          child: ElevatedButton.icon(
-                            onPressed: () {}, 
-                            icon: Icon( // <-- Icon
-                              Icons.download,
-                              size: 24.0,
-                            ),
-                            label: Text('Antrenman 1'),
-                            style: ButtonStyle(
-                              backgroundColor:
-                                  MaterialStateProperty.all(Colors.blueGrey),
-                              overlayColor: MaterialStateProperty.all(Colors.red),
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width - 10,
-                        height: 100,
-                        child: Container(
-                          margin: const EdgeInsets.all(8.0),
-                          child: ElevatedButton.icon(
-                            onPressed: () {}, 
-                            icon: Icon(
-                              Icons.home,
-                              size: 24.0,
-                            ),
-                            label: Text('Antrenman 2'),
-                            style: ButtonStyle(
-                              backgroundColor:
-                                  MaterialStateProperty.all(Colors.blueGrey),
-                              overlayColor: MaterialStateProperty.all(Colors.red),
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width - 10,
-                        height: 100,
-                        child: Container(
-                          margin: const EdgeInsets.all(8.0),
-                          child: ElevatedButton.icon(
-                            onPressed: () {}, 
-                            icon: Icon(
-                              Icons.account_balance,
-                              size: 24.0,
-                            ),
-                            label: Text('Antrenman 3'),
-                            style: ButtonStyle(
-                              backgroundColor:
-                                  MaterialStateProperty.all(Colors.blueGrey),
-                              overlayColor: MaterialStateProperty.all(Colors.red),
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width - 10,
-                        height: 100,
-                        child: Container(
-                          margin: const EdgeInsets.all(8.0),
-                          child: ElevatedButton.icon(
-                            onPressed: () {}, 
-                            icon: Icon(
-                              Icons.clear,
-                              size: 24.0,
-                            ),
-                            label: Text('Antrenman 4'),
-                            style: ButtonStyle(
-                              backgroundColor:
-                                  MaterialStateProperty.all(Colors.blueGrey),
-                              overlayColor: MaterialStateProperty.all(Colors.red),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ExercisesScreen()));
+                },
+                child: null,
+              ),
+              Text(
+                'This is My Text',
+                style: TextStyle(color: Colors.white, fontSize: 30),
+              ),
+              Center(
+                child: Counter(
+                  min: 0,
+                  max: 30,
+                  bound: 3,
+                  step: 1,
+                  onValueChanged: print,
                 ),
+              ),
             ],
           ),
         ),
-        ),
-      );
+      ),
+    );
   }
 }
