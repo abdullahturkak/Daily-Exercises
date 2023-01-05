@@ -1,4 +1,4 @@
-# daily_exercises
+# Daily_Exercises
 
 dailyExercises
 
