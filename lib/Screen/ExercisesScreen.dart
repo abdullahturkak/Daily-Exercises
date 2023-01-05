@@ -15,46 +15,56 @@ class _ExercisesScreenState extends State<ExercisesScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                child: Text(
-                  'This is My Text',
-                  style: TextStyle(color: Colors.white, fontSize: 30),
-                ),
-                height: 300,
-                width: MediaQuery.of(context).size.width,
-                decoration: const BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/btnfoto11.jpeg'),
-                        fit: BoxFit.fitHeight)),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ExercisesScreen()));
-                },
-                child: null,
-              ),
-              Text(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              child: Text(
                 'This is My Text',
                 style: TextStyle(color: Colors.white, fontSize: 30),
               ),
-              Center(
-                child: Counter(
-                  min: 0,
-                  max: 30,
-                  bound: 3,
-                  step: 1,
-                  onValueChanged: print,
+              height: 300,
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('assets/btnfoto11.jpeg'),
+                      fit: BoxFit.fitHeight)),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 10,
+              height: 100,
+              child: Container(
+                margin: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text('Elevated Button'),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.blueGrey),
+                    overlayColor: MaterialStateProperty.all(Colors.red),
+                  ),
                 ),
               ),
-            ],
-          ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+            ),
+            Text(
+              'This is My Text',
+              style: TextStyle(color: Colors.white, fontSize: 30),
+            ),
+            Center(
+              child: Counter(
+                min: 0,
+                max: 30,
+                bound: 3,
+                step: 1,
+                onValueChanged: print,
+              ),
+            ),
+          ],
         ),
       ),
     );
