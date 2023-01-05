@@ -34,7 +34,7 @@ class _ProgramScreenState extends State<ProgramScreen> {
               ),
               Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 400,
+                  height: MediaQuery.of(context).size.height,
                   child: Column(
                     children: [
                       Padding(
