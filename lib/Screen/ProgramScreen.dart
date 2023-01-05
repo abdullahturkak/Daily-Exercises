@@ -98,7 +98,7 @@ class _ProgramScreenState extends State<ProgramScreen> {
                             margin: const EdgeInsets.all(8.0),
                             child: ElevatedButton(
                               onPressed: () {},
-                              child: const Text('Antrenman 4'),
+                              child: const Text('Antrenman 3'),
                               style: ButtonStyle(
                                 backgroundColor:
                                     MaterialStateProperty.all(Colors.blueGrey),
