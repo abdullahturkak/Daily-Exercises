@@ -116,7 +116,6 @@ class _ProgramScreenState extends State<ProgramScreen> {
           ),
               ),
         ),
-      )
-    );
+      );
   }
 }
