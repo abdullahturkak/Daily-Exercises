@@ -16,7 +16,6 @@ class _ProgramScreenState extends State<ProgramScreen> {
       resizeToAvoidBottomInset: false,
       body: Center(
         child:SingleChildScrollView(
-          padding: EdgeInsets.all(32),
           child: Column(
             children:[
               Container(
@@ -25,7 +24,7 @@ class _ProgramScreenState extends State<ProgramScreen> {
                     style: TextStyle(color: Colors.white, fontSize: 30),
                   ),
                     height: 300,
-                    width: MediaQuery.of(context).size.width - 5,
+                    width: MediaQuery.of(context).size.width,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage('assets/btnfoto11.jpeg'),
@@ -44,9 +43,13 @@ class _ProgramScreenState extends State<ProgramScreen> {
                         height: 100,
                         child: Container(
                           margin: const EdgeInsets.all(8.0),
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            child: const Text('Antrenman 1'),
+                          child: ElevatedButton.icon(
+                            onPressed: () {}, 
+                            icon: Icon( // <-- Icon
+                              Icons.download,
+                              size: 24.0,
+                            ),
+                            label: Text('Antrenman 1'),
                             style: ButtonStyle(
                               backgroundColor:
                                   MaterialStateProperty.all(Colors.blueGrey),
@@ -60,14 +63,17 @@ class _ProgramScreenState extends State<ProgramScreen> {
                         height: 100,
                         child: Container(
                           margin: const EdgeInsets.all(8.0),
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            child: const Text('Antrenman 2'),
+                          child: ElevatedButton.icon(
+                            onPressed: () {}, 
+                            icon: Icon(
+                              Icons.home,
+                              size: 24.0,
+                            ),
+                            label: Text('Antrenman 2'),
                             style: ButtonStyle(
                               backgroundColor:
                                   MaterialStateProperty.all(Colors.blueGrey),
-                              overlayColor:
-                                  MaterialStateProperty.all(Colors.yellow),
+                              overlayColor: MaterialStateProperty.all(Colors.red),
                             ),
                           ),
                         ),
@@ -77,14 +83,17 @@ class _ProgramScreenState extends State<ProgramScreen> {
                         height: 100,
                         child: Container(
                           margin: const EdgeInsets.all(8.0),
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            child: const Text('Antrenman 3'),
+                          child: ElevatedButton.icon(
+                            onPressed: () {}, 
+                            icon: Icon(
+                              Icons.account_balance,
+                              size: 24.0,
+                            ),
+                            label: Text('Antrenman 3'),
                             style: ButtonStyle(
                               backgroundColor:
                                   MaterialStateProperty.all(Colors.blueGrey),
-                              overlayColor:
-                                  MaterialStateProperty.all(Colors.blue),
+                              overlayColor: MaterialStateProperty.all(Colors.red),
                             ),
                           ),
                         ),
@@ -94,14 +103,17 @@ class _ProgramScreenState extends State<ProgramScreen> {
                         height: 100,
                         child: Container(
                           margin: const EdgeInsets.all(8.0),
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            child: const Text('Antrenman 4'),
+                          child: ElevatedButton.icon(
+                            onPressed: () {}, 
+                            icon: Icon(
+                              Icons.clear,
+                              size: 24.0,
+                            ),
+                            label: Text('Antrenman 4'),
                             style: ButtonStyle(
                               backgroundColor:
                                   MaterialStateProperty.all(Colors.blueGrey),
-                              overlayColor:
-                                  MaterialStateProperty.all(Colors.blue),
+                              overlayColor: MaterialStateProperty.all(Colors.red),
                             ),
                           ),
                         ),
