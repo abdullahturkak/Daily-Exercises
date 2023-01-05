@@ -17,7 +17,6 @@ class _ProgramScreenState extends State<ProgramScreen> {
       body: Center(
         child:SingleChildScrollView(
           padding: EdgeInsets.all(32),
-          reverse: true,
           child: Column(
             children:[
               Container(
