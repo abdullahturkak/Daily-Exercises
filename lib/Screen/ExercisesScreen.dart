@@ -1,7 +1,6 @@
 //ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:counter/counter.dart';
 
 class ExercisesScreen extends StatefulWidget {
   const ExercisesScreen({super.key});
@@ -55,15 +54,7 @@ class _ExercisesScreenState extends State<ExercisesScreen> {
               'This is My Text',
               style: TextStyle(color: Colors.white, fontSize: 30),
             ),
-            Center(
-              child: Counter(
-                min: 0,
-                max: 30,
-                bound: 3,
-                step: 1,
-                onValueChanged: print,
-              ),
-            ),
+            Center(),
           ],
         ),
       ),
