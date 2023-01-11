@@ -1,6 +1,6 @@
 # Daily_Exercises
 
-dailyExercises
+Daily Exercises App
 
 ## Getting Started
 

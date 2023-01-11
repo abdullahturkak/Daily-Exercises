@@ -1,15 +1,33 @@
 //ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
+import 'dart:async';
 
 class ExercisesScreen extends StatefulWidget {
-  const ExercisesScreen({super.key});
+  const ExercisesScreen({Key? key}) : super(key: key);
 
   @override
   State<ExercisesScreen> createState() => _ExercisesScreenState();
 }
 
 class _ExercisesScreenState extends State<ExercisesScreen> {
+  int _counter = 30;
+  Timer? _timer;
+  void _startTimer() {
+    _counter = 30;
+    if (_timer != null) {
+      _timer!.cancel();
+    }
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+      setState(() {
+        if (_counter > 0) {
+          _counter--;
+        } else {
+          _timer!.cancel();
+        }
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,10 +36,6 @@ class _ExercisesScreenState extends State<ExercisesScreen> {
         child: Column(
           children: [
             Container(
-              child: Text(
-                'This is My Text',
-                style: TextStyle(color: Colors.white, fontSize: 30),
-              ),
               height: 300,
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
@@ -38,12 +52,8 @@ class _ExercisesScreenState extends State<ExercisesScreen> {
               child: Container(
                 margin: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text('Elevated Button'),
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.blueGrey),
-                    overlayColor: MaterialStateProperty.all(Colors.red),
-                  ),
+                  onPressed: () => _startTimer(),
+                  child: Text("BAŞLA!"),
                 ),
               ),
             ),
@@ -51,10 +61,22 @@ class _ExercisesScreenState extends State<ExercisesScreen> {
               padding: const EdgeInsets.all(15.0),
             ),
             Text(
-              'This is My Text',
+              "$_counter",
               style: TextStyle(color: Colors.white, fontSize: 30),
             ),
-            Center(),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+            ),
+            (_counter > 0)
+                ? Text("")
+                : Text(
+                    "BUGÜNLÜK YETER!",
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 36,
+                    ),
+                  ),
           ],
         ),
       ),

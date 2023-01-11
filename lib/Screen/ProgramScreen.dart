@@ -49,8 +49,7 @@ class _ProgramScreenState extends State<ProgramScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                        const ExercisesScreen()));
+                                    builder: (context) => ExercisesScreen()));
                           },
                           icon: Icon(
                             Icons.download,
