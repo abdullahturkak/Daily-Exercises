@@ -1,0 +1,27 @@
+{
+  "name": "daily-exercises",
+  "version": "1.0.0",
+  "description": "Daily Exercises App",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdullahturkak/Daily-Exercises.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdullahturkak/Daily-Exercises/issues"
+  },
+  "homepage": "https://github.com/abdullahturkak/Daily-Exercises#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.8.3"
+  }
+}
