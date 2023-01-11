@@ -53,7 +53,7 @@ class _ExercisesScreenState extends State<ExercisesScreen> {
                 margin: const EdgeInsets.all(8.0),
                 child: ElevatedButton(
                   onPressed: () => _startTimer(),
-                  child: Text("BAŞLA!"),
+                  child: Text("HEMEN BAŞLA!"),
                 ),
               ),
             ),
