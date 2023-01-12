@@ -26,6 +26,7 @@ app.post('/signup', (req, res) => {
         email,
         password,
     });
+    console.log(user);
 
     //return res.send('Sign Up Route')
 })
