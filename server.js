@@ -16,17 +16,20 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.post('/signup', (req, res) => {
+app.post('/signup', async (req, res) => {
     const { email, password } = req.body;
     console.log(email);
     console.log(password);
     const schema = new mongoose.Schema({ email: 'string', password: 'string' });
-    const User = mongoose.model('User', schema);
+    const User = mongoose.model.User || mongoose.model('User', schema);
+
     let user = new User({
         email,
         password,
     });
     console.log(user);
+
+    await user.save();
 
     //return res.send('Sign Up Route')
 })
