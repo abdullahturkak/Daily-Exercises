@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 class ExercisesScreen extends StatefulWidget {
-  ExercisesScreen({super.key});
+  const ExercisesScreen({Key? key}) : super(key: key);
 
   @override
   State<ExercisesScreen> createState() => _ExercisesScreenState();
@@ -77,7 +77,6 @@ class _ExercisesScreenState extends State<ExercisesScreen> {
                       fontSize: 36,
                     ),
                   ),
-            Center(),
           ],
         ),
       ),
