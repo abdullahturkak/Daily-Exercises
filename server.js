@@ -20,6 +20,8 @@ app.post('/signup', (req, res) => {
     const { email, password } = req.body;
     console.log(email);
     console.log(password);
+    const schema = new mongoose.Schema({ email: 'string', password: 'string' });
+    const User = mongoose.model('User', schema);
 
 
     //return res.send('Sign Up Route')
