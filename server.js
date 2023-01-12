@@ -21,7 +21,7 @@ app.post('/signup', async (req, res) => {
     console.log(email);
     console.log(password);
     const schema = new mongoose.Schema({ email: 'string', password: 'string' });
-    const User = mongoose.model.User || mongoose.model('User', schema);
+    const User = mongoose.model('User', schema);
 
     let user = new User({
         email,
@@ -30,6 +30,7 @@ app.post('/signup', async (req, res) => {
     console.log(user);
 
     await user.save();
+    res.json({ token: "1234567890" });
 
     //return res.send('Sign Up Route')
 })
