@@ -22,7 +22,10 @@ app.post('/signup', (req, res) => {
     console.log(password);
     const schema = new mongoose.Schema({ email: 'string', password: 'string' });
     const User = mongoose.model('User', schema);
-
+    let user = new User({
+        email,
+        password,
+    });
 
     //return res.send('Sign Up Route')
 })
