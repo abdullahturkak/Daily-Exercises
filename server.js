@@ -31,8 +31,6 @@ app.post('/signup', async (req, res) => {
 
     await user.save();
     res.json({ token: "1234567890" });
-
-    //return res.send('Sign Up Route')
 })
 
 app.listen(5000, () => {
