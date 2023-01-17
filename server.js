@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 mongoose.set('strictQuery', true);
 
 async function connectDB() {
-    await mongoose.connect("mongodb+srv://Abdullah:Abdullah@cluster0.bbwdlkj.mongodb.net/test",
+    await mongoose.connect("mongodb+srv://Abdullah:Abdullah@cluster0.bbwdlkj.mongodb.net/program",
         { useUnifiedTopology: true, useNewUrlParser: true, });
     console.log("db connected")
 }
@@ -17,17 +17,17 @@ app.get('/', (req, res) => {
 })
 
 app.post('/signup', async (req, res) => {
-    const { email, password } = req.body;
-    console.log(email);
-    console.log(password);
-    const schema = new mongoose.Schema({ email: 'string', password: 'string' });
+    const { _progname, programicerik } = req.body;
+    console.log(_progname);
+    console.log(programicerik);
+    const schema = new mongoose.Schema({ _progname: 'string', programicerik: 'string' });
     const User = mongoose.model('User', schema);
 
     let user = new User({
-        email,
-        password,
+        _progname,
+        programicerik,
     });
-    console.log(user);
+    console.log(_progname);
 
     await user.save();
     res.json({ token: "1234567890" });
