@@ -70,7 +70,7 @@ class _ExercisesScreenState extends State<ExercisesScreen> {
             (_counter > 0)
                 ? Text("")
                 : Text(
-                    "BUGÜNLÜK YETER!",
+                    "BUGÜNLÜK YETER",
                     style: TextStyle(
                       color: Colors.green,
                       fontWeight: FontWeight.bold,
