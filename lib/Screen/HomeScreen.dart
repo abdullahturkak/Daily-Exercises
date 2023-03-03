@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:daily_exercises/Screen/ProgramScreen.dart';
 import 'package:flutter/material.dart';
+import '../Services/resuablewidget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -205,45 +206,11 @@ class _HomeState extends State<HomeScreen> {
                         margin: const EdgeInsets.all(8.0),
                         child: ElevatedButton(
                           onPressed: () {},
-                          child: const Text('Press Me'),
+                          child: Text('Press Me'),
                           style: ButtonStyle(
                             backgroundColor:
                                 MaterialStateProperty.all(Colors.blueGrey),
                             overlayColor: MaterialStateProperty.all(Colors.red),
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width - 10,
-                      height: 100,
-                      child: Container(
-                        margin: const EdgeInsets.all(8.0),
-                        child: ElevatedButton(
-                          onPressed: () {},
-                          child: const Text('Press Me'),
-                          style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.blueGrey),
-                            overlayColor:
-                                MaterialStateProperty.all(Colors.yellow),
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width - 10,
-                      height: 100,
-                      child: Container(
-                        margin: const EdgeInsets.all(8.0),
-                        child: ElevatedButton(
-                          onPressed: () {},
-                          child: const Text('Press Me'),
-                          style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.blueGrey),
-                            overlayColor:
-                                MaterialStateProperty.all(Colors.blue),
                           ),
                         ),
                       ),
