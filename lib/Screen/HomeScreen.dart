@@ -204,9 +204,33 @@ class _HomeState extends State<HomeScreen> {
                       height: 100,
                       child: Container(
                         margin: const EdgeInsets.all(8.0),
-                        child: ElevatedButton(
+                        child: ElevatedButton.icon(
                           onPressed: () {},
-                          child: Text('Press Me'),
+                          icon: Icon(
+                            Icons.person,
+                            size: 24.0,
+                          ),
+                          label: Text('Vücut Bilgilerim'),
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(Colors.blueGrey),
+                            overlayColor: MaterialStateProperty.all(Colors.red),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width - 10,
+                      height: 100,
+                      child: Container(
+                        margin: const EdgeInsets.all(8.0),
+                        child: ElevatedButton.icon(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.lunch_dining,
+                            size: 24.0,
+                          ),
+                          label: Text('Başlangıç Yemek Programı'),
                           style: ButtonStyle(
                             backgroundColor:
                                 MaterialStateProperty.all(Colors.blueGrey),

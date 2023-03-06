@@ -34,95 +34,17 @@ class _ProgramScreenState extends State<ProgramScreen> {
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
+                decoration: new BoxDecoration(color: Colors.white),
                 child: Column(
-                  children: [
+                  children: const [
                     Padding(
-                      padding: const EdgeInsets.all(15.0),
+                      padding: EdgeInsets.all(15.0),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width - 10,
-                      height: 100,
-                      child: Container(
-                        margin: const EdgeInsets.all(8.0),
-                        child: ElevatedButton.icon(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ExercisesScreen()));
-                          },
-                          icon: Icon(
-                            Icons.download,
-                            size: 24.0,
-                          ),
-                          label: Text('Antrenman 1'),
-                          style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.blueGrey),
-                            overlayColor: MaterialStateProperty.all(Colors.red),
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width - 10,
-                      height: 100,
-                      child: Container(
-                        margin: const EdgeInsets.all(8.0),
-                        child: ElevatedButton.icon(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.home,
-                            size: 24.0,
-                          ),
-                          label: Text('Antrenman 2'),
-                          style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.blueGrey),
-                            overlayColor: MaterialStateProperty.all(Colors.red),
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width - 10,
-                      height: 100,
-                      child: Container(
-                        margin: const EdgeInsets.all(8.0),
-                        child: ElevatedButton.icon(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.account_balance,
-                            size: 24.0,
-                          ),
-                          label: Text('Antrenman 3'),
-                          style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.blueGrey),
-                            overlayColor: MaterialStateProperty.all(Colors.red),
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width - 10,
-                      height: 100,
-                      child: Container(
-                        margin: const EdgeInsets.all(8.0),
-                        child: ElevatedButton.icon(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.clear,
-                            size: 24.0,
-                          ),
-                          label: Text('Antrenman 4'),
-                          style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.blueGrey),
-                            overlayColor: MaterialStateProperty.all(Colors.red),
-                          ),
-                        ),
-                      ),
+                    ListTile(
+                      leading: Icon(Icons.lunch_dining),
+                      title: Text('I like life'),
+                      subtitle: Text('Healthy eating is good for health'),
+                      trailing: Icon(Icons.food_bank),
                     ),
                   ],
                 ),

@@ -12,9 +12,6 @@ Future<void> getDataFromApi() async {
     for (var item in data) {
       widgets.add(Text(item['name']));
     }
-    setState(() {
-      _widgetList = widgets;
-    });
   } else {
     throw Exception('Failed to load data from API');
   }
